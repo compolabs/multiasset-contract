@@ -4,8 +4,9 @@ use std::str::FromStr;
 
 pub(crate) async fn setup(rpc: &str) -> anyhow::Result<WalletUnlocked> {
     let provider = Provider::connect(rpc).await?;
-    let secret = std::env::var("WALLET_SECRET")?;
-    let wallet = WalletUnlocked::new_from_private_key(secret.parse()?, Some(provider));
+    let mnemonic = std::env::var("MNEMONIC")?;
+    let wallet =
+        WalletUnlocked::new_from_mnemonic_phrase(&mnemonic, Some(provider.clone())).unwrap();
 
     Ok(wallet)
 }
