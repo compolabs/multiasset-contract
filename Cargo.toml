@@ -1,6 +1,6 @@
 [package]
 name = "multiasset_sdk"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 authors = ["dmitriy <dmitriy.dolinin.v@gmail.com>"]
 license = "Apache-2.0"
@@ -9,13 +9,13 @@ description = "SRC-20 MultiAsset Rust SDK"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.91"
-clap = { version = "4.5.20", features = ["derive"] }
+anyhow = "1.0.95"
+clap = { version = "4.5.27", features = ["derive"] }
 dotenv = "0.15.0"
-fuels = { version = "0.66.9", features = ["fuel-core-lib"] }
+fuels = { version = "0.66.10", features = ["fuel-core-lib"] }
 rand = "0.8.5"
 sha2 = "0.10.8"
-tokio = { version = "1.41.0", features = ["rt", "macros"] }
+tokio = { version = "1.43.0", features = ["rt", "macros"] }
 
 [[test]]
 harness = true

@@ -21,6 +21,7 @@ async fn main() -> anyhow::Result<()> {
             CoreCommands::Deploy(args) => args.run().await,
             CoreCommands::Mint(args) => args.run().await,
             CoreCommands::MintMany(args) => args.run().await,
+            CoreCommands::TransferMany(args) => args.run().await,
         },
         Command::Info(args) => match args.commands {
             InfoCommands::Bech32Conv(args) => args.run().await,

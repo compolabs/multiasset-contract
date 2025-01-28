@@ -1,6 +1,6 @@
 use crate::commands::core::{
     asset_new::AssetNewCommand, deploy::DeployCommand, mint::MintCommand,
-    mint_many::MintManyCommand,
+    mint_many::MintManyCommand, transfer_many::TransferManyCommand,
 };
 use clap::Subcommand;
 
@@ -21,4 +21,8 @@ pub(crate) enum CoreCommands {
     /// Mints an asset amount to recipients
     #[clap(short_flag = 'N')]
     MintMany(MintManyCommand),
+
+    /// Transfers an asset amount to recipients
+    #[clap(short_flag = 'T')]
+    TransferMany(TransferManyCommand),
 }

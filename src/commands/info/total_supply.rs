@@ -1,6 +1,4 @@
-use crate::commands::{
-    utils::{setup, validate_contract_id},
-};
+use crate::commands::utils::{setup, validate_contract_id};
 use clap::Args;
 use fuels::types::AssetId;
 use multiasset_sdk::MultiAssetContract;
